@@ -1,0 +1,20 @@
+{
+  "name": "guia-hoteles",
+  "version": "1.0.0",
+  "description": "Nuestro primer proyecto de Nodejs",
+  "homepage": "https://bitbucket.org/adarwin/guia-hoteles#readme",
+  "bugs": {
+    "url": "https://bitbucket.org/adarwin/guia-hoteles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://adarwin-admin@bitbucket.org/adarwin/guia-hoteles.git"
+  },
+  "license": "ISC",
+  "author": "Darwin Fernando Acosta",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
