@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/main.css" rel="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <link href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
 
     <title>Guía de Hoteles</title>
 </head>
@@ -14,33 +14,41 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Hoteles</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Precios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Términos y Condiciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hoteles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Términos y Condiciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="jumbotron">
+    <!-- Banner con imagen agregada -->
+    <div class="jumbotron p-5 mb-4 bg-light text-center">
         <div class="container">
+            <!-- Reemplaza la ruta de esta imagen por la que desees usar de banner -->
+            <img src="images/hotel.png" class="img-fluid rounded mb-4 shadow-sm" alt="Banner Hoteles" style="max-height: 300px; width: 100%; object-fit: cover;">
             <h1 class="display-4">Hoteles</h1>
             <p class="lead">
                 Encuentra los mejores hoteles para disfrutar de una experiencia única.
@@ -60,126 +68,105 @@
     <div class="container">
 
         <!-- Características -->
-        <div class="row">
-
+        <div class="row text-center mb-4">
             <div class="col-sm-12 col-md-4">
                 <h3>Ubicación</h3>
-                <p>
-                    Encuentra hoteles ubicados en las mejores zonas turísticas y comerciales.
-                </p>
+                <p>Encuentra hoteles ubicados en las mejores zonas turísticas y comerciales.</p>
             </div>
-
             <div class="col-sm-12 col-md-4">
                 <h3>Comodidad</h3>
-                <p>
-                    Habitaciones modernas equipadas con todas las comodidades necesarias.
-                </p>
+                <p>Habitaciones modernas equipadas con todas las comodidades necesarias.</p>
             </div>
-
             <div class="col-sm-12 col-md-4">
                 <h3>Servicios</h3>
-                <p>
-                    Disfruta de piscina, gimnasio, restaurante y conexión WiFi gratuita.
-                </p>
+                <p>Disfruta de piscina, gimnasio, restaurante y conexión WiFi gratuita.</p>
             </div>
-
         </div>
 
         <hr>
 
-        <!-- Lista de hoteles -->
-        <div class="d-flex flex-wrap flex-row-reverse">
-
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Plaza</h4>
-                    <p>
-                        Excelente ubicación en el centro de la ciudad.
-                    </p>
+        <!-- Lista de hoteles con flexbox moderno (se usó gap-4 para separar uniformemente) -->
+        <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
+            
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Plaza">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel Plaza</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">La Ceiba</h6>
+                    <p class="card-text">Excelente ubicación en el centro de la ciudad.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
-                        Reservar
-                    </button>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                <h4>Hotel Paraíso</h4>
-                    <p>
-                        Hotel ideal para vacaciones frente al mar.
-                    </p>
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Paraíso">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel Paraíso</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Playa del Carmen</h6>
+                    <p class="card-text">Hotel ideal para vacaciones frente al mar.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
-                        Reservar
-                    </button>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Ejecutivo</h4>
-                    <p>
-                        Perfecto para viajes de negocios y reuniones.
-                    </p>
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Ejecutivo">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel Ejecutivo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Tegucigalpa</h6>
+                    <p class="card-text">Perfecto para viajes de negocios y reuniones.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">
                         <span class="oi oi-plus"></span> Reservar
                     </button>
                 </div>
             </div>
 
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel La Paz</h4>
-                    <p>
-                        Excelente ubicación en el centro de la ciudad.
-                    </p>
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel La Paz">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel La Paz</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">La Paz</h6>
+                    <p class="card-text">Excelente ubicación en el centro de la ciudad.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
-                        Reservar
-                    </button>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Madrid</h4>
-                    <p>
-                        Excelente ubicación en el centro de la ciudad.
-                    </p>
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Madrid">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel Madrid</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Madrid</h6>
+                    <p class="card-text">Excelente ubicación en el centro de la ciudad.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
-                        Reservar
-                    </button>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
-            <div class="card-hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel San Pablo</h4>
-                    <p>
-                        Excelente ubicación en el centro de la ciudad.
-                    </p>
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel San Pablo">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel San Pablo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">San Pablo</h6>
+                    <p class="card-text">Excelente ubicación en el centro de la ciudad.</p>
                 </div>
-                <div>
-                    <button class="btn btn-primary btn-reserva">
-                        Reservar
-                    </button>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
         </div>
-
     </div>
 
     <footer>
-        <div class="row">
+        <div class="row pt-4">
             <div class="col-sm-4 d-flex flex-column">
                 <a href="http://www.facebook.com">Facebook</a>
                 <a href="http://www.twitter.com">Twitter</a>
@@ -194,11 +181,11 @@
                     <p><span class="oi oi-inbox footer-addres-icon"></span> contacto@guiahoteles.com</p>
                 </address>
             </div>
-            <div class="col-sm-4 d-flex flex-column alin-items-end">
-                <a href="http://www.facebook.com">Nosotros</a>
-                <a href="http://www.twitter.com">Precios</a>
-                <a href="http://www.instagram.com">Términos y condiciones</a>
-                <a href="http://www.google.com">Contacto</a>
+            <div class="col-sm-4 d-flex flex-column align-items-end">
+                <a href="./about.html">Nosotros</a>
+                <a href="./precios.html">Precios</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="./contacto.html">Contacto</a>
             </div>
         </div>
     </footer>
