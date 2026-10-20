@@ -64,7 +64,7 @@
             </ol>
         </nav>
 
-        <!-- Botones Collapse (Actualizados a data-bs-toggle y data-bs-target) -->
+        <!-- Botones Collapse -->
         <div class="row mb-3">
             <div class="col-sm-4">
                 <button class="btn btn-primary w-100 mb-2" type="button" data-bs-toggle="collapse"
@@ -86,24 +86,36 @@
             </div>
         </div>
 
-        <!-- Contenido Collapse -->
+        <!-- Contenido Collapse-->
         <div class="row">
-            <div class="col-sm-4 collapse multi-collapse" id="funciona">
-                <div class="card card-body">
-                    <h3>¿Cómo funciona?</h3>
-                    <p>Buscá los hoteles de acuerdo a tu preferencia.</p>
+            <!-- La columna mantiene el espacio -->
+            <div class="col-sm-4">
+                <!-- El colapsable va por dentro -->
+                <div class="collapse multi-collapse" id="funciona">
+                    <div class="card card-body">
+                        <h3>¿Cómo funciona?</h3>
+                        <p>Buscá los hoteles de acuerdo a tu preferencia.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 collapse multi-collapse" id="reserva">
-                <div class="card card-body">
-                    <h3>¿Dónde puedo reservar?</h3>
-                    <p>Elegí la ciudad que te interese y luego realiza la reserva.</p>
+
+            <!-- La columna mantiene el espacio -->
+            <div class="col-sm-4">
+                <div class="collapse multi-collapse" id="reserva">
+                    <div class="card card-body">
+                        <h3>¿Dónde puedo reservar?</h3>
+                        <p>Elegí la ciudad que te interese y luego realiza la reserva.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 collapse multi-collapse" id="pago">
-                <div class="card card-body">
-                    <h3>¿Cómo pago?</h3>
-                    <p>Utilizá tu tarjeta favorita.</p>
+
+            <!-- La columna mantiene el espacio -->
+            <div class="col-sm-4">
+                <div class="collapse multi-collapse" id="pago">
+                    <div class="card card-body">
+                        <h3>¿Cómo pago?</h3>
+                        <p>Utilizá tu tarjeta favorita.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,76 +140,119 @@
         <hr>
 
         <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
-            <!-- Solo dejé los primeros 2 hoteles en este ejemplo para que no sea tan largo, puedes pegar el resto -->
+            
+            <!-- Hotel Plaza -->
             <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
                 <img src="images/hotel.png" class="card-img-top" alt="Hotel Plaza">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Plaza</h5>
+                    <!-- Popover agregado al título -->
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel Plaza" data-bs-content="¡Incluye desayuno buffet todos los días!">Hotel Plaza</h5>
                     <h6 class="card-subtitle mb-2 text-muted">La Ceiba</h6>
                     <p class="card-text">Excelente ubicación en el centro de la ciudad.</p>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
                 </div>
                 <div class="card-footer bg-transparent border-top-0">
                     <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
 
+            <!-- Hotel Cabañas -->
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Cabañas">
+                <div class="card-body">
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel Cabañas" data-bs-content="Las primeras reservas cuentan con clases de tango gratis.">Hotel Cabañas</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">San Pedro Sula</h6>
+                    <p class="card-text">Ubicación en área comercial con excelentes vistas.</p>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
+                </div>
+            </div>
+
+            <!-- Hotel Paraíso -->
             <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
                 <img src="images/hotel.png" class="card-img-top" alt="Hotel Paraíso">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Paraíso</h5>
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel Paraíso" data-bs-content="Acceso directo a la playa las 24 horas.">Hotel Paraíso</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Playa del Carmen</h6>
                     <p class="card-text">Hotel ideal para vacaciones frente al mar.</p>
-                    <button class="btn btn-outline-success w-100" data-toggle="mode" data-target="#contacto">Contacto</button>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
                 </div>
                 <div class="card-footer bg-transparent border-top-0">
-                    <button class="btn btn-primary btn-reserva w-100">Reservar</button> <!--Boton para activar modal-->
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
                 </div>
             </div>
+
+            <!-- Hotel Tegucigalpa -->
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Tegucigalpa">
+                <div class="card-body">
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel Tegucigalpa" data-bs-content="Salas de reuniones y WiFi de alta velocidad.">Hotel Tegucigalpa</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ejecutivo</h6>
+                    <p class="card-text">Hotel ideal para ejecutivos.</p>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
+                </div>
+            </div>
+
+            <!-- Hotel Madrid -->
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel Madrid">
+                <div class="card-body">
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel Madrid" data-bs-content="A 5 minutos de los principales museos.">Hotel Madrid</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Madrid Centro</h6>
+                    <p class="card-text">Disfruta de la mejor gastronomía en nuestro restaurante.</p>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
+                </div>
+            </div>
+
+            <!-- Hotel San Pablo -->
+            <div class="card card-hotel d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="images/hotel.png" class="card-img-top" alt="Hotel San Pablo">
+                <div class="card-body">
+                    <h5 class="card-title text-primary" role="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" title="Hotel San Pablo" data-bs-content="Piscina olímpica y spa de lujo disponible.">Hotel San Pablo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Zona Norte</h6>
+                    <p class="card-text">El ambiente perfecto para relajarte y desconectar.</p>
+                    <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#contacto">Contacto</button>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <button class="btn btn-primary btn-reserva w-100">Reservar</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- modal -->
-    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <!-- Modal -->
+    <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Contacto con el hotel
-                    </h5>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">Contacto con el hotel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
                 <div class="modal-body">
                     <form>
-
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">
-                                Tu email:
-                            </label>
-                            <input type="text" class="form-control" id="recipient-name">
+                        <div class="mb-3">
+                            <label for="recipient-email" class="form-label">Tu email:</label>
+                            <input type="email" class="form-control" id="recipient-email" placeholder="nombre@ejemplo.com">
                         </div>
-
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">
-                                Mensaje:
-                            </label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                        <div class="mb-3">
+                            <label for="message-text" class="form-label">Mensaje:</label>
+                            <textarea class="form-control" id="message-text" rows="4"></textarea>
                         </div>
-
                     </form>
                 </div>
-
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">
-                        Enviar
-                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Enviar</button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -227,9 +282,37 @@
         </div>
     </footer>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+    <!--definicion de script que indica la activacion del tooltip dentro de la pagina-->
+    <!-- <script>
+        $(function(){
+            $("[data-toogle='tooltip']").tooltip();
+            $("[data-toogle='popover']").popover();
+        });
+    </script> -->
+
+    <!-- Usamos bootstrap.bundle.min.js porque ya incluye Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de inicialización con Javascript puro (Vanilla JS) para Bootstrap 5 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Inicializar todos los Tooltips (si llegaras a usar alguno)
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Inicializar todos los Popovers (Los que pusimos en los títulos)
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl);
+            });
+        });
+    </script>
 
 </body>
 
