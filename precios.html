@@ -75,6 +75,10 @@
                     aria-controls="tarjetas" aria-selected="false">Tarjetas</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="tarjetas2-tab" data-bs-toggle="pill" href="#tarjetas2" role="tab"
+                    aria-controls="tarjetas2" aria-selected="false">Tarjetas2</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="comentarios-tab" data-bs-toggle="pill" href="#comentarios" role="tab"
                     aria-controls="comentarios" aria-selected="false">Comentarios</a>
             </li>
@@ -171,10 +175,70 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><span class="oi oi-credit-card me-2"></span> Visa</li>
                             <li class="list-group-item"><span class="oi oi-credit-card me-2"></span> Mastercard</li>
-                            <li class="list-group-item"><span class="oi oi-credit-card me-2"></span> American Express
+                            <li class="list-group-item"><span class="oi oi-credit-card me-2"></span> American
+                                Express
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- Pestaña 2.1: Tarjetas 2 -->
+            <!-- Pestaña 2.1: Tarjetas 2 (Acordeón Bootstrap 5) -->
+            <div class="tab-pane fade" id="tarjetas2" role="tabpanel" aria-labelledby="tarjetas2-tab">
+                <div class="accordion mt-4" id="accordionTarjetas">
+
+                    <!-- Tarjeta Básica -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseBasica" aria-expanded="true" aria-controls="collapseBasica">
+                                Tarjeta Básica
+                            </button>
+                        </h2>
+                        <div id="collapseBasica" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionTarjetas">
+                            <div class="accordion-body">
+                                Podes reservar en 3 cuotas sin interés.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta VIP -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseVIP" aria-expanded="false" aria-controls="collapseVIP">
+                                Tarjeta VIP
+                            </button>
+                        </h2>
+                        <div id="collapseVIP" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionTarjetas">
+                            <div class="accordion-body">
+                                Podes reservar en 6 cuotas sin interés. Al llegar, recibirás una canasta de obsequios
+                                para disfrutar con tu familia.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Black -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseBlack" aria-expanded="false" aria-controls="collapseBlack">
+                                Tarjeta Black
+                            </button>
+                        </h2>
+                        <div id="collapseBlack" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionTarjetas">
+                            <div class="accordion-body">
+                                Podes reservar en 12 cuotas sin interés. Al llegar, recibirás una canasta de obsequios
+                                para disfrutar con tu familia y un acceso al gimnasio y spa todos los días de tus
+                                vacaciones.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
