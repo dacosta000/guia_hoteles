@@ -1,0 +1,34 @@
+.jumbotron {
+  /* Aplicando el mixin con amarillo */
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 2rem;
+  background-color: #fffa19;
+  color: black;
+}
+footer {
+  /* Aplicando el mixin con rojo para cumplir el ejercicio */
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 10px 10px 0 10px;
+  background-color: #dc3545;
+  color: white;
+}
+.card-hotel {
+  flex: 1 200px;
+  margin-top: 10px;
+}
+.btn-reserva {
+  width: 100%;
+  border-radius: 0px;
+  /* Aplicando el verde directamente mediante variable */
+  background-color: #198754;
+  color: white;
+  border: none;
+}
+.footer-addres-icon {
+  margin-right: 10px;
+}
+.tab-content {
+  padding-top: 10px;
+}

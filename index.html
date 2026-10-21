@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css css/index.css -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <!-- endbuild -->
 
     <title>Guía de Hoteles</title>
 </head>
@@ -263,7 +265,7 @@
                     <h6 class="card-subtitle mb-2 text-muted">Zona Norte</h6>
                     <p class="card-text">El ambiente perfecto para relajarte y desconectar.</p>
                     <button class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal"
-                        data-bs-target="#contacto">Contacto</button>
+                        data-bs-target="#contacto" id="contactoBtn">Contacto</button> <!--Modificacion-->
                 </div>
                 <div class="card-footer bg-transparent border-top-0">
                     <button class="btn btn-primary btn-reserva w-100">Reservar</button>
@@ -336,14 +338,36 @@
         $(function(){
             $("[data-toogle='tooltip']").tooltip();
             $("[data-toogle='popover']").popover();
-            $(".carousel").carousel(
+            $(".carousel").carousel({
                 interval: 2000
-            );
+            });
+
+            $('#contacto').on('show.bs.modal', function (e){
+                console.log('el modal contacto se está mostrando');
+
+                $('#contactoBtn').removeClass('btn-outline-success');
+                $('#contactoBtn').addClass('btn-primary');
+                $('#contactoBtn').prop('disabled', true);
+                
+            });
+            $('#contacto').on('shown.bs.modal', function (e){
+                console.log('el modal contacto se mostró');
+            });
+            $('#contacto').on('hide.bs.modal', function (e){
+                console.log('el modal contacto se oculta');
+            });
+            $('#contacto').on('hidden.bs.modal', function (e){
+                console.log('el modal contacto se ocultó');
+                $('#contactoBtn').prop('disabled', false);
+            });
+
         });
     </script> -->
 
     <!-- Usamos bootstrap.bundle.min.js porque ya incluye Popper.js -->
+     <!-- build:js js/main.js -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- endbuild -->
 
     <!-- Script de inicialización con Javascript puro (Vanilla JS) para Bootstrap 5 -->
     <script>
@@ -364,6 +388,38 @@
             var myCarousel = document.querySelector('#carouselControls');
             var carousel = new bootstrap.Carousel(myCarousel, {
                 interval: 2000 // Cambiar este número para hacerlo más rápido o más lento (1000 = 1 segundo)
+            });
+
+            // --- EVENTOS DEL MODAL ---
+            var modalContacto = document.getElementById('contacto');
+            var contactoBtn = document.getElementById('contactoBtn');
+
+            // 1. Cuando comienza a abrirse
+            modalContacto.addEventListener('show.bs.modal', function (e) {
+                console.log('El modal contacto se está mostrando');
+                // Inhabilitar y cambiar color (Punto 3)
+                contactoBtn.classList.remove('btn-outline-success');
+                contactoBtn.classList.add('btn-primary');
+                contactoBtn.disabled = true;
+            });
+
+            // 2. Cuando se terminó de abrir
+            modalContacto.addEventListener('shown.bs.modal', function (e) {
+                console.log('El modal contacto se mostró');
+            });
+
+            // 3. Cuando comienza a ocultarse
+            modalContacto.addEventListener('hide.bs.modal', function (e) {
+                console.log('El modal contacto se oculta');
+            });
+
+            // 4. Cuando se terminó de ocultar
+            modalContacto.addEventListener('hidden.bs.modal', function (e) {
+                console.log('El modal contacto se ocultó');
+                // Volver a activar y regresar a color original (Punto 4)
+                contactoBtn.classList.remove('btn-primary');
+                contactoBtn.classList.add('btn-outline-success');
+                contactoBtn.disabled = false;
             });
         });
     </script>

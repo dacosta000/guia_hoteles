@@ -1,0 +1,47 @@
+/* 1. Definición de variables de colores */
+@yellow: #fffa19;
+@red: #dc3545;
+@green: #198754;
+
+/* 2. Mixin con múltiples atributos (márgenes, padding y color) */
+.estilos-caja(@top: 0px, @bottom: 0px, @pad: 0px, @bgColor: transparent) {
+  margin-top: @top;
+  margin-bottom: @bottom;
+  padding: @pad;
+  background-color: @bgColor;
+}
+
+/* 3. Utilizando el mixin y las variables en diferentes elementos */
+.jumbotron {
+  /* Aplicando el mixin con amarillo */
+  .estilos-caja(50px, 0px, 2rem, @yellow);
+  color: black;
+}
+
+footer {
+  /* Aplicando el mixin con rojo para cumplir el ejercicio */
+  .estilos-caja(10px, 0px, 10px 10px 0 10px, @red);
+  color: white; 
+}
+
+.card-hotel {
+  flex: 1 200px;
+  margin-top: 10px;
+}
+
+.btn-reserva {
+  width: 100%;
+  border-radius: 0px;
+  /* Aplicando el verde directamente mediante variable */
+  background-color: @green;
+  color: white;
+  border: none;
+}
+
+.footer-addres-icon {
+  margin-right: 10px;
+}
+
+.tab-content {
+  padding-top: 10px;
+}
